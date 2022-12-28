@@ -36,8 +36,8 @@
 
         <TextBlock Grid.Row="3" 
                    Text="{Binding DatabaseMessage}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
                    FontSize="24"/>
             
         

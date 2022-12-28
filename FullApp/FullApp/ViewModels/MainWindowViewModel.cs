@@ -10,9 +10,9 @@ namespace FullApp.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private string _title = "Prism Application";
-        private IKeyloggerService _keylogger;
-        private IEventAggregator _ea;
+        private string _title = "PrismDemoApp";
+        private readonly IKeyloggerService _keylogger;
+        private readonly IEventAggregator _ea;
         public string Title
         {
             get { return _title; }
@@ -37,10 +37,10 @@ namespace FullApp.ViewModels
         {
             var shell = (Window)sender;
             _keylogger.KeyboardRegisteredAndHook(new WindowInteropHelper(shell).EnsureHandle());
-            _keylogger.NewKeyboardEvent += _keylogger_NewKeyboardEvent;
+            _keylogger.NewKeyboardEvent += Keylogger_NewKeyboardEvent;
         }
 
-        private void _keylogger_NewKeyboardEvent(object sender, System.EventArgs e)
+        private void Keylogger_NewKeyboardEvent(object sender, System.EventArgs e)
         {
             KeyboardEventArgs newScan = (KeyboardEventArgs) e;
             _ea.GetEvent<NewScanEvent>().Publish(newScan);

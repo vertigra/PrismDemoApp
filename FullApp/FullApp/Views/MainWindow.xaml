@@ -4,7 +4,8 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:core="clr-namespace:FullApp.Core;assembly=FullApp.Core"
-        Title="{Binding Title}" Height="350" Width="525" >
+        WindowState="Maximized"
+        Title="{Binding Title}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
