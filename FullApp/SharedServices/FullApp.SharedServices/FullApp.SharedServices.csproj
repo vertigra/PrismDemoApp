@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RawInput.Sharp" Version="0.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\FullApp.Core\FullApp.Core.csproj" />
+    <ProjectReference Include="..\FullApp.SharedSwrvices.Interface\FullApp.SharedServices.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

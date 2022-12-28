@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="FullApp.Modules.ModuleName.Views.ViewA"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FullApp.Modules.ModuleName.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True" >
+    <Grid Margin="10">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Message}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontSize="24"/>
+
+            <TextBlock Text="{Binding KeyboardInput}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   FontSize="24"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
+    
